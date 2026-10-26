@@ -1,0 +1,256 @@
+
+=head1 NAME
+
+E<lt>script nameE<gt> E<mdash> E<lt>One-line description of this script's purposeE<gt>
+
+=head1 SYNOPSIS
+
+=over 12
+
+=item B<script name>
+
+[B<--input>=F<input_file> | B<-i> F<input_file>]
+[B<--output>=F<output_file> | B<-o> F<output_file>]
+[B<--help>]
+[B<--log=F<logfile>>]
+[B<--man>]
+[B<--quiet>]
+[B<--usage>]
+[B<--debug>]
+[B<--version>]
+[B<--verbose>]
+[--]
+[F<input_file> ...]
+
+=back
+
+=head1 DESCRIPTION
+
+A full description of the script and its features.
+
+May include numerous subsections (I<i.e.>, =head2, =head3, etc.).
+
+=head2 System Identification
+
+=over 4
+
+=item SYSTEM ID
+
+System Identification
+
+=item COMPONENT ID
+
+Component Identificaiton
+
+=item PROGRAM ID
+
+Program ID
+
+=back
+
+=head1 OPTIONS & ARGUMENTS
+
+=head2 Standard Options
+
+=over 4
+
+=item [B<--input>=F<input_file> | -i F<input_file>]
+
+Input file, default is standard in, F<STDIN>.
+Single dash,
+C<->,
+means read from F<STDIN>.
+
+=item [B<--output>=F<output_file> | -o F<output_file>]
+
+Output file, default is standard out, F<STDOUT>.
+Single dash,
+C<->,
+means write to F<STDOUT>.
+
+=item [B<--help>]
+
+Print the help message to standard error, F<STDERR>, and exit.
+
+=item [B<--log=F<logfile>>]
+
+Copy all STDOUT and STDERR output to the F<logfile>.
+If F<logfile> is not specified, use F<E<lt>PGMNAMEE<gt>.log>.
+
+=item [B<--man>]
+
+Print the man page to standard error, F<STDERR>, and exit.
+
+=item [B<--quiet>
+
+Only print fatal error messages to F<STDERR>.
+
+=item [B<--usage>]
+
+Print the usage message to standard error, F<STDERR>, and exit.
+
+=item [B<--debug>]
+
+Turn on the debug switch.
+
+=item [B<--version>]
+
+Print the version, copyright, and license message
+to standard error, F<STDERR>, and exit.
+
+=item [B<--verbose>]
+
+Turn on the verbose switch.
+
+=item [--] File list marker
+
+The the double dash, C<-->,
+on the command line signals the end options.
+The remaining items arguments,
+even if some look like options.
+
+=back
+
+=head2 Arguments
+
+Only file names are allowed to be arguments.
+For all other items use options.
+
+=over 4
+
+=item [F<input_file>]
+
+Input file, default is standard in, F<STDIN>.
+Single dash,
+C<->,
+also means read from F<STDIN>.
+
+=back
+
+=head1 SECURITY
+
+B<NOTE:> You must be the superuser to run this script.
+
+B<WARNING:> This script contains security info.
+Do not set world-readable. Better yet, redesign
+so that security information is not saved
+in your source code. 
+
+=head1 AVAILABILITY
+
+How to get this script.
+
+=head1 EXAMPLES
+
+Insert instructive examples here.
+
+=head1 NOTES & CAVEATS
+
+What additional information would be useful to a user.
+
+=head1 DIAGNOSTICS
+
+A list of every error and warning message that the script can generate
+(even the ones that will E<ldquo>never happenE<rdquo>), with a full explanation
+of each problem, one or more likely causes, and any suggested remedies.
+
+=head1 EXIT STATUS
+
+What exit codes exist?
+
+=head1 CONFIGURATION AND ENVIRONMENT
+
+No environmental variables were hurt during the development of this script.
+
+=head1 DEPENDENCIES
+
+A list of all of the other scripts that
+this script relies upon,
+including any restrictions on versions,
+part of this script's distribution,
+or must be installed separately.
+
+=head1 FILES
+
+A list of the files that are used by this script.
+
+=head1 STANDARDS
+
+A list of the standards that this script complies with.
+
+=head1 VERSION
+
+B<script name> Version 0.0=$Revision: 220 $ Initial Release
+
+=head1 HISTORY
+
+Version 0.0
+
+$Date: 2007-08-14 10:31:39 -0500 (Tue, 14 Aug 2007) $
+
+$HeadURL: file:///cygdrive/c/svn/olaus/brch/r3.0dev/src/bash/lib/script.txt $
+
+$Id: script.txt 220 2007-08-14 15:31:39Z a0214394 $
+
+Initial Release
+
+=head1 BUGS AND LIMITATIONS
+
+A list of known problems with the module, together with some indication of
+whether they are likely to be fixed in an upcoming release.
+
+Also, a list of restrictions on the features the module does provide:
+data types that cannot be handled,
+performance issues
+and the circumstances in which they may arise,
+practical limitations on the size of data sets,
+special cases that are not (yet) handled, etc.
+
+The initial release usually just has:
+
+There are no known bugs in this script.
+
+Please report problems to Mark Jensen.
+
+Patches are welcome.
+
+=head1 INCOMPATIBILITIES
+
+A list of any known scripts that this script cannot be used in conjunction with.
+This may be due to name conflicts in the interface, or competition for system
+or program resources, or due to internal limitations of BASH.
+
+=head1 RESOURCES
+
+=over 4
+
+=item Barrett I<et al.> 2005
+
+Daniel J. Barrett, Richard E. Silverman, and Robert G. Byrnes.
+2005.
+I<SSH, the Secure Shell: The Definitive Guide>,
+2nd Edition.
+(Sebastopol: OE<rsquo>Reilly Media)
+
+=item Robbins and Beebe 2005
+
+Arnold Robbins and Nelson H. F. Beebe.
+2005.
+I<Classic Shell Scripting>.
+(Sebastopol: OE<rsquo>Reilly Media)
+
+=back
+
+=head1 SEE ALSO
+
+B<ols_begin>
+
+=head1 LICENSE AND COPYRIGHT
+
+include(license.txt)
+
+=head1 AUTHOR
+
+Mark Jensen E<lt>mjjensen@ti.comE<gt>, E<lt>mark@jensen.netE<gt>
+
+=cut

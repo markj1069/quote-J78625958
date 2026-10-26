@@ -1,0 +1,185 @@
+
+=head1 NAME
+
+<function name> - <One-line description of function's purpose>
+
+=head1 SYNOPSIS
+
+E<lt>B<function_name>E<gt> [I<arg1>] ...
+
+=head1 DESCRIPTION
+
+A full description of the function and its features.
+
+May include numerous subsections
+(I<i.e.>, =head2, =head3, I<etc.>).
+
+=head1 ARGUMENTS
+
+=over 4
+
+=item I<arg1>
+
+(required|optional) Argument 1 description.
+
+.
+.
+.
+
+=back
+
+=head1 SUBROUTINES/METHODS
+
+A separate section listing the public components of the module's interface.
+
+These normally consist of either subroutines that may be exported, or methods
+that may be called on objects belonging to the classes that the module
+provides.
+
+Name the section accordingly.
+
+In an object-oriented module, this section should begin with a sentence (of the
+form "An object of this class represents ...") to give the reader a high-level
+context to help them understand the methods that are subsequently described.
+
+=head1 SECURITY
+
+B<NOTE:> You must be the superuser to run this function.
+
+B<WARNING:> This fuction contains security info.
+Do not set world-readable. Better yet, redesign
+so that security information is not saved
+in your source code. 
+
+=head1 AVAILABILITY
+
+How to get this function.
+
+=head1 EXAMPLES
+
+Insert instructive examples here.
+
+=head1 NOTES & CAVEATS
+
+What additional information would be useful to a programmer.
+
+=head1 DIAGNOSTICS
+
+A list of every error and warning message that the module can generate
+(even the ones that will "never happen"), with a full explanation
+of each problem, one or more likely causes, and any suggested remedies.
+
+=head1 EXIT STATUS
+
+=head1 CONFIGURATION AND ENVIRONMENT
+
+=over 4
+
+=item EX_CODE
+
+Current exit code.
+
+=item PGMID
+
+6 character Program ID, see B<ols_begin>.
+
+=back
+
+=head1 DEPENDENCIES
+
+A list of all of the other scripts that this script relies upon, including any
+restrictions on versions, part of this script's distribution,
+or must be installed separately.
+
+=head1 INCOMPATIBILITIES
+
+A list of any functions that this function cannot be used in conjunction with.
+This may be due to name conflicts in the interface, or competition for system
+or program resources, or due to internal limitations of BASH (for example,
+many modules that use source code filters are mutually incompatible).
+
+=head1 FILES
+
+A list of the files that are used by this function.
+
+=head1 STANDARDS
+
+A list of the standards that his function complies with.
+
+=head1 BUGS AND LIMITATIONS
+
+A list of known problems with the module, together with some indication of
+whether they are likely to be fixed in an upcoming release.
+
+Also, a list of restrictions on the features the module does provide: data types
+that cannot be handled, performance issues and the circumstances in which they
+may arise, practical limitations on the size of data sets, special cases that
+are not (yet) handled, etc.
+
+The initial template usually just has:
+
+There are no known bugs in this module.
+
+Please report problems to <Maintainer name(s)> (<contact address>)
+
+Patches are welcome.
+
+=head1 VERSION
+
+B<function name> Version 0.0-$Revision: 203 $
+
+=head1 HISTORY
+
+Version 0.0-$Revision: 203 $ Initial Release
+
+$Date: 2007-05-09 12:38:51 -0500 (Wed, 09 May 2007) $
+
+$HeadURL: file:///cygdrive/c/svn/olaus/brch/r3.0dev/src/bash/lib/function.txt $
+
+$Id: function.txt 203 2007-05-09 17:38:51Z a0214394 $
+
+=head1 RESOURCES
+
+=over 4
+
+=item Conway, Damian 2005
+
+Damian Conway.
+2005.
+I<Ten Essential Development Practice>,
+Retrieved March 15, 2007,
+from L<http://www.perl.com/pub/a/2005/07/14/bestpractices.html>.
+
+=item Barrett, I<et al.> 2005
+
+Daniel J. Barrett, Richard E. Silverman, and Robert G. Byrnes.
+2005.
+I<SSH, the Secure Shell: The Definitive Guide>,
+2nd Edition.
+(Sebastopol: O'Reilly Media)
+
+=item Robbins and Beebe 2005
+
+Arnold Robbins and Nelson H. F. Beebe.
+2005.
+I<Classic Shell Scripting>.
+(Sebastopol: O'Reilly Media)
+
+=back
+
+=head1 SEE ALSO
+
+B<ols_begin>
+
+=head1 AUTHOR
+
+Mark J Jensen E<lt>mark@jensen.netE<gt>
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (c) 2007 Texas Instruments. All rights reserved.
+
+include(license.txt)
+
+=cut
+

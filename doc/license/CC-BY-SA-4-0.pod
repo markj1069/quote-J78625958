@@ -1,0 +1,84 @@
+# $Id: CC-BY-SA-4-0.pod 14 2016-07-12 19:12:56Z mark $
+# $URL: file:///D:/svn/J70267938-Dev-Proj-File/trnk/src/license/CC-BY-SA-4-0.pod $
+
+=head1 Copyright
+
+(c) Copyright 2016, Mark J. Jensen
+
+=head1 Attribution-ShareAlike 4.0 International License
+
+This is a human-readable summary of the CC BY-SA 4.0 License.
+The full license is available at:
+L<https://creativecommons.org/licenses/by-sa/4.0/legalcode>.
+
+=head2 You are free to:
+
+=over 4
+
+=item Share
+
+Copy and redistribute the material in any medium or format
+
+=item Adapt
+
+Remix, transform, and build upon the material
+
+=back
+
+for any purpose, even commercially.
+
+The licensor cannot revoke these freedoms
+as long as you follow the license terms.
+
+=head2 Under the following terms:
+
+=over 4
+
+=item Attribution
+
+You must give L<appropriate credit|https://creativecommons.org/licenses/by-sa/4.0/#>,
+provide a link to the license, and
+L<indicate if changes were made|https://creativecommons.org/licenses/by-sa/4.0/#>.
+You may do so in any reasonable manner,
+but not in any way that suggests
+the licensor endorses you or your use.
+
+=item ShareAlike
+
+If you remix, transform, or build upon the material,
+you must distribute your contributions
+under the
+L<same license|https://creativecommons.org/licenses/by-sa/4.0/#>
+as the original.
+
+=item No additional restrictions
+
+You may not apply legal terms or
+L<technological measures|https://creativecommons.org/licenses/by-sa/4.0/#>
+that legally restrict others from doing anything the license permits.
+
+=back
+
+=head2 Notices:
+
+=over 4
+
+=item *
+
+You do not have to comply with the license for elements
+of the material in the public domain or
+where your use is permitted by an applicable
+L<exception or limitation|https://creativecommons.org/licenses/by-sa/4.0/#>.
+
+=item *
+
+No warranties are given.
+The license may not give you all of the permissions necessary for your intended use.
+For example, other rights such as
+L<publicity, privacy, or moral rights|https://creativecommons.org/licenses/by-sa/4.0/#>
+may limit how you use the material.
+
+=back
+
+=cut
+
