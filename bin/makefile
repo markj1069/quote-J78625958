@@ -1,15 +1,17 @@
 # Constants
 
 
-MED_DB    := med.sqlite
-MED_TODAY := $(shell date +%F)
-MED_BAK_DB := bak/bak_$(MED_TODAY)_med.sqlite
-
+DB    := /mnt/d/db/quote.sqlite
+DB_TODAY := $(shell date +%F)
+BAK_DB := /mnt/d/quote-J78625958/arc/bak_$(DB_TODAY)_db.sqlite
+ 
 
 # Document Directory Makefile
 
 .PHONY: clean
 .PHONY: chk-quotes
+.PHONY: ckd-DB
+.PHONY: bak-DB
 
 
 
@@ -40,17 +42,16 @@ clean:
 	@-rm -f *.8      2>/dev/null      # Remove derived man pages.
 	@-rm -f *.9      2>/dev/null      # Remove derived man pages.
 
-db-bak:
-	sqlite3 $(MED_DB)  "VACUUM INTO '$(MED_BAK_DB)';"
-	sqlite3 $(MED_BAK_DB)  "PRAGMA quick_check;"
-	sqlite3 $(MED_BAK_DB)  "PRAGMA integrity_check;"
-	sqlite3 $(MED_BAK_DB)  "PRAGMA foreign_key_check;"
+bak-db:
+	sqlite3 $(DB)  "VACUUM INTO '$(BAK_DB)';"
+	sqlite3 $(BAK_DB)  "PRAGMA quick_check;"
+	sqlite3 $(BAK_DB)  "PRAGMA integrity_check;"
+	sqlite3 $(BAK_DB)  "PRAGMA foreign_key_check;"
 
-db-chk:
-	sqlite3 $(MED_DB)  "PRAGMA quick_check;"
-	sqlite3 $(MED_DB)  "PRAGMA integrity_check;"
-	sqlite3 $(MED_DB)  "PRAGMA foreign_key_check;"
+chk-db:
+	sqlite3 $(DB)  "PRAGMA quick_check;"
+	sqlite3 $(DB)  "PRAGMA integrity_check;"
+	sqlite3 $(DB)  "PRAGMA foreign_key_check;"
 
 chk-quotes:
 	./chk_quotes.sh
-	
