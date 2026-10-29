@@ -59,8 +59,6 @@ LIMIT $NUM;
 
 sqlite3 "$DB" < "$SQL" >"$HLD"        # Execute the SQL query and save the output to the HLD file.
 
-
-
 tr -d '"' <"$HLD"
 
 ols_end
