@@ -39,7 +39,7 @@ fi
 
 cat > "$SQL" <</*                     # A throw back to my old OS/360 days.
 .mode csv --quote off
-.headers on
+.headers off
 .separator " -- "
 
 SELECT
@@ -59,6 +59,8 @@ LIMIT $NUM;
 
 sqlite3 "$DB" < "$SQL" >"$HLD"        # Execute the SQL query and save the output to the HLD file.
 
+echo " "
 tr -d '"' <"$HLD"
+echo " "
 
 ols_end
