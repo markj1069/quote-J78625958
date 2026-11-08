@@ -30,6 +30,7 @@ clean:
 	@-rm -f *.sed    2>/dev/null      # Remove sed commands.
 	@-rm -f *.sql    2>/dev/null      # Remove sqlite3 commands.
 	@-rm -f *.tar    2>/dev/null      # Remove tar archives.
+	@-rm -f tst_quote.sqlite 2>/dev/null  # Remove the test quote database file.
 	@-rm -f *.tgz    2>/dev/null      # Remove tar archives.
 	@-rm -f *.tmp    2>/dev/null      # Remove temporary files.
 	@-rm -f tmp.*    2>/dev/null      # Remove temporary files.
