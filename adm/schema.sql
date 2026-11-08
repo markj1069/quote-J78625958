@@ -41,10 +41,11 @@ CREATE TABLE [ref_quote](
   [rid] TEXT(24) NOT NULL REFERENCES [zotero_refs]([rid]),  -- CUID2 Unique identifier for the reference.
   PRIMARY KEY([rid], [qid]));                               -- Composite primary key ensuring each reference-quote combination is unique.
 
-CREATE VIEW creator_display AS       -- 
+CREATE VIEW creator_display AS       -- View for displaying creator information with a computed display name.
 SELECT
     c.aid,
     c.family,
+
     c.given,
     c.middle,
     c.nick,
