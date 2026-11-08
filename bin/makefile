@@ -22,6 +22,7 @@ clean:
 	@-rm -f *~       2>/dev/null      # Remove backup files.
 	@-rm -f *.adoc   2>/dev/null      # Remove documentation files.
 	@-rm -f *.bak    2>/dev/null      # Remove backup files.
+	@-rm -f *.csv    2>/dev/null      # Remove CSV files.
 	@-rm -f *.hold   2>/dev/null      # Remove temporary files.
 	@-rm -f hold.*   2>/dev/null      # Remove temporary files.
 	@-rm -f *.html   2>/dev/null      # Remove derived HTML files.

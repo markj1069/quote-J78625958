@@ -40,8 +40,6 @@ else
     ols_err "$QID" "5039" "$EX_OK" "$SCRIPT_NAME: Using specified data file: $ODS."
 fi
 
-
-
 if [[ -z "$DB" ]]; then
     DB="$DEFAULT_DB"                  # Use the default database path if no argument is provided.
     ols_err "$QID" "5001" "$EX_OK" "Using default database: $DB"
@@ -69,20 +67,28 @@ if [[ "$EX_CODE" -ne 0 ]]; then
     exit
 fi
 
+# ============ Verify the number of creators in the new data ============
+
 NNUM=$(csvstat --columns 1 --count "$CRE" )
 
-cat > "$SQL" <</*                     # A throw back to my old OS/360 days.
+if [[ $NNUM -eq 0 ]]; then
+    ols_err "$QID" "5032" "$EX_FATAL" "No creators found in the raw data."
+    exit
+else
+    ols_err "$QID" "5033" "$EX_OK" "Number of creators in raw data: $NNUM"
+fi
+
+# ============ Import the new data into the database. ============
+
+sqlite3 "$DB" <</*                    # A throw back to my old OS/360 days.
 .mode csv
 .headers off
 .import --skip 1 "$CRE" creators
 
-SELECT COUNT(*)                      -- Select the count of creators that do not have a corresponding entry in the creator_quote table.
-FROM creators;
-
 .exit
 /*
 
-sqlite3 "$DB" < "$SQL" > "$HLD"       # Execute the SQL query and save the output to the HLD file.
+
 
 ENUM=$(($NNUM - $ONUM))               # Expect to have added NNUM creators to the database.
 ols_err "$QID" "5010" "$EX_OK" "Expected number of creators to be added: $ENUM"
@@ -94,7 +100,7 @@ if [[ "$NUM" -ne $ENUM ]]; then
     ols_err "$QID" "5008" "$EX_FATAL" "Mismatch between expected and actual number of creators in the database."
 fi
 
-rm "$CRE" "$SQL" "$HLD"               # Clean up temporary files.
+rm "$CRE"                             # Clean up temporary files.
 
 ols_err "$QID" "9999" "$EX_OK" "$SCRIPT_NAME: End"
 
